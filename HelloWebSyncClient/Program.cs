@@ -1,5 +1,5 @@
 ﻿using Dotmim.Sync;
-using Dotmim.Sync.SqlServer;
+using Dotmim.Sync.Sqlite;
 using Dotmim.Sync.Web.Client;
 using System;
 using System.Net.Http;
@@ -9,7 +9,6 @@ namespace HelloWebSyncClient
 {
     class Program
     {
-        private static string clientConnectionString = $"Data Source=(localdb)\\mssqllocaldb; Initial Catalog=Client;Integrated Security=true;";
 
         static async Task Main(string[] args)
         {
@@ -20,12 +19,11 @@ namespace HelloWebSyncClient
 
         private static async Task SynchronizeAsync()
         {
-            // Database script used for this sample : https://github.com/Mimetis/Dotmim.Sync/blob/master/CreateAdventureWorks.sql 
 
             var serverOrchestrator = new WebRemoteOrchestrator("https://localhost:44342/api/sync");
 
             // Second provider is using plain old Sql Server provider, relying on triggers and tracking tables to create the sync environment
-            var clientProvider = new SqlSyncProvider(clientConnectionString);
+            var clientProvider = new SqliteSyncProvider("dataforsyncclient.db");
 
             var options = new SyncOptions
             {

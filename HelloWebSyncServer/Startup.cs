@@ -5,7 +5,6 @@ using System.Linq;
 using System.Threading.Tasks;
 using Dotmim.Sync;
 using Dotmim.Sync.Enumerations;
-using Dotmim.Sync.MySql;
 using Dotmim.Sync.SqlServer;
 using Dotmim.Sync.Web.Server;
 using Microsoft.AspNetCore.Builder;
@@ -35,19 +34,10 @@ namespace HelloWebSyncServer
 
             // [Required]: Get a connection string to your server data source
             var connectionString = Configuration.GetSection("ConnectionStrings")["SqlConnection"];
-            // var connectionString = Configuration.GetSection("ConnectionStrings")["MySqlConnection"];
 
-            var options = new SyncOptions
-            {
-                SnapshotsDirectory = "C:\\Tmp\\Snapshots",
-                BatchSize = 2000,
-            };
+            var options = new SyncOptions();
 
-            // [Required] Tables involved in the sync process:
-            var tables = new string[] {"ProductCategory", "ProductModel", "Product",
-            "Address", "Customer", "CustomerAddress", "SalesOrderHeader", "SalesOrderDetail" };
-
-            // [Required]: Add a SqlSyncProvider acting as the server hub.
+            var tables = new string[] {"Test" };
             services.AddSyncServer<SqlSyncProvider>(connectionString, tables, options);
         }
 

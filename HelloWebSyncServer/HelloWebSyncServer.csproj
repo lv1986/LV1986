@@ -4,4 +4,9 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Dotmim.Sync.SqlServer" Version="0.9.7" />
+    <PackageReference Include="Dotmim.Sync.Web.Server" Version="0.9.7" />
+  </ItemGroup>
+
 </Project>

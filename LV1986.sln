@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.32916.344
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HelloWebSyncServer", "HelloWebSyncServer\HelloWebSyncServer.csproj", "{595B9AB2-0BCC-4554-ADFE-DA2A467149BB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HelloWebSyncClient", "HelloWebSyncClient\HelloWebSyncClient.csproj", "{6F453642-C7F6-4318-9B82-69344068370B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{595B9AB2-0BCC-4554-ADFE-DA2A467149BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{595B9AB2-0BCC-4554-ADFE-DA2A467149BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{595B9AB2-0BCC-4554-ADFE-DA2A467149BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{595B9AB2-0BCC-4554-ADFE-DA2A467149BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F453642-C7F6-4318-9B82-69344068370B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F453642-C7F6-4318-9B82-69344068370B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F453642-C7F6-4318-9B82-69344068370B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F453642-C7F6-4318-9B82-69344068370B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BD795AFB-C6FC-4895-8507-4487B9BAE13E}
+	EndGlobalSection
+EndGlobal
